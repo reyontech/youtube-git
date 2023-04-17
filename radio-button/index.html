@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom radio button</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .custom-radio{
+            display: flex;
+            justify-content: center;
+            padding: 30px 0 ;
+        }
+
+        .custom-radio label{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .custom-radio label input {
+            opacity: 0;
+        }
+
+        .custom-radio label input + span {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid gray;
+            margin: 0 6px;
+        }
+
+        .custom-radio label input:checked + span {
+            border: 2px solid blue;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-radio label input:checked + span:after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="custom-radio">
+        <label>
+            <input type="radio" name="choose" checked>
+            <span></span> Yes
+        </label>
+        <label>
+            <input type="radio" name="choose">
+            <span></span> No
+        </label>
+    </div>
+</body>
+</html>
