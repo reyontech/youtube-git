@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox</title>
+    <style>
+        .custom-checkbox {
+            display: flex;
+            padding: 30px 0;
+        }
+
+        .custom-checkbox label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .custom-checkbox label input {
+            opacity: 0;
+        }
+        .custom-checkbox label input + span {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 2px solid #CCC;
+        }
+
+        .custom-checkbox label input:checked + span {
+            border: 2px solid blue;
+            position: relative;
+        }
+
+        .custom-checkbox label input:checked + span::after{
+            content: '✓';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            font-size: 12px;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="custom-checkbox">
+        <label>
+            <input type="checkbox" name="lang" checked> <span></span> HTML
+        </label>
+        <label>
+            <input type="checkbox" name="lang"> <span></span> CSS
+        </label>
+        <label>
+            <input type="checkbox" name="lang"> <span></span> Javscript
+        </label>
+    </div>
+</body>
+</html>
